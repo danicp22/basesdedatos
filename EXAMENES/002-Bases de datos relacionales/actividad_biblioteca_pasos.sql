@@ -32,8 +32,8 @@ CREATE TABLE libros (  --Creamos la tabla libros
       ON UPDATE CASCADE
       ON DELETE RESTRICT);
 
-
 CREATE INDEX idx_libros_titulo ON libros (titulo); --Creamos un indice sobre titulo
+
 
 DESCRIBE libros; --Verificamos si se ha creado la tabla, deberia de salir esto:
 ```
