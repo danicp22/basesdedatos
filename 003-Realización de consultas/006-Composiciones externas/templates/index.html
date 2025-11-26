@@ -11,7 +11,8 @@
       	padding:20px;
       }
       article{border:1px solid indigo;padding:20px;
-        border-radius:20px;}
+        border-radius:20px;display:flex;gap:20px;}
+      .imagen{width:100px;height:100px;background:lightgrey;border-radius:5px;}
     </style>
   </head>
   <body>
@@ -20,9 +21,12 @@
       <section>
         {% for linea in datos:%}
         	<article>
-        	<p>Asignatura: {{linea['Nombre de la asignatura']}}</p>
-            <p>Nombre: {{linea['Nombre del alumno']}}</p>
-            <p>Apellidos: {{linea['Apellidos del alumno']}}</p>
+            <div class="imagen"></div>
+            <div class="texto">
+              <p>Asignatura: {{linea['Nombre de la asignatura']}}</p>
+              <p>Nombre: {{linea['Nombre del alumno']}}</p>
+              <p>Apellidos: {{linea['Apellidos del alumno']}}</p>
+            </div>
           </article>
         {% endfor %}
       </section>    
